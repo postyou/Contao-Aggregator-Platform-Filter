@@ -1,0 +1,36 @@
+{
+  "name":"postyou/aggregator_platform_filter",
+  "description":"This is an Add-On Extension to the Social-Aggregator Fork in the postyou Repo. It filters the Newstyp.",
+  "keywords":["aggregator","type-filter"],
+  "type":"contao-module",
+  "homepage":"http://www.postyou.de",
+  "license":"MIT",
+  "authors":[
+    {
+      "name":"Gerald Meier",
+      "role":"Developer"
+    }
+  ],
+  "support":{
+    "issues":"https://github.com/postyou/Contao-Aggregator-Platform-Filter/issues",
+    "source":"https://github.com/postyou/Contao-Aggregator-Platform-Filter/"
+  },
+  "require":{
+    "php":">=5.3",
+    "contao/core":">=3.3 <3.5.1",
+    "contao-community-alliance/composer-installer":"*",
+    "menatwork/contao-multicolumnwizard":"~3",
+    "terhuerne/aggregator":"~1"
+
+  },
+  "autoload":{
+    "classmap":[""]
+  },
+  "extra":{
+    "contao":{
+      "sources":{
+        "":"system/modules/aggregator_Platform_filter"
+      }
+    }
+  }
+}
