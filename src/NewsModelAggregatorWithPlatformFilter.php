@@ -55,8 +55,8 @@ class NewsModelAggregatorWithPlatformFilter extends NewsModelAggregator
 			$arrOptions['order']  = "$t.date DESC";
         }
 
-        $arrOptions['limit']  = $intLimit;
-        $arrOptions['offset'] = $intOffset;
+        //$arrOptions['limit']  = $intLimit;
+        //$arrOptions['offset'] = $intOffset;
 
 
         if(isset($typefilterArr) && !empty($typefilterArr) ) {
@@ -64,7 +64,7 @@ class NewsModelAggregatorWithPlatformFilter extends NewsModelAggregator
             foreach ($typefilterArr as $filterArr){
                 $queryArr=$arrColumns;
                 $queryArr[]="$t.plattform='".$filterArr["type"]."'";
-                $modelTmpColl=static::findBy($queryArr, null, array("limit"=>intval($filterArr["count"])));
+                $modelTmpColl=static::findBy($queryArr, null, array("limit"=>intval($filterArr["count"]),'order'=>$arrOptions['order']));
                 if($modelTmpColl) {
                     $models=array_merge($models,$modelTmpColl->getModels());
 
