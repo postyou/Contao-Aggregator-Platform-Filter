@@ -1,6 +1,6 @@
 <?php
 
-$GLOBALS['TL_DCA']['tl_module']['palettes']['newslist'] = str_replace(';{template_legend',',hideFacebookNews,text_only_mode,messageLength,platformFilter;{template_legend', $GLOBALS['TL_DCA']['tl_module']['palettes']['newslist']);
+$GLOBALS['TL_DCA']['tl_module']['palettes']['newslist'] = str_replace(';{template_legend',',platformFilter;{template_legend', $GLOBALS['TL_DCA']['tl_module']['palettes']['newslist']);
 //$GLOBALS['TL_DCA']['tl_module']['palettes']['newsreader'] = str_replace(';{template_legend',',hideFacebookNews,text_only_mode,messageLength;{template_legend', $GLOBALS['TL_DCA']['tl_module']['palettes']['newsreader']);
 //$GLOBALS['TL_DCA']['tl_module']['palettes']['newsarchive'] = str_replace(';{template_legend',',hideFacebookNews,text_only_mode,messageLength;{template_legend', $GLOBALS['TL_DCA']['tl_module']['palettes']['newsarchive']);
 //$GLOBALS['TL_DCA']['tl_module']['palettes']['newsmenu'] = str_replace(';{template_legend',',hideFacebookNews,text_only_mode,messageLength;{template_legend', $GLOBALS['TL_DCA']['tl_module']['palettes']['newsmenu']);
@@ -23,7 +23,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['platformFilter'] = array
                 'inputType'	=> 'text',
                 'eval'	=> array
                 (
-                    'mandatory'	=> true,
+//                    'mandatory'	=> true,
 //                    'tl_class'	=> 'bill_items_amount'
                 ),
 //                'save_callback'	=> array
@@ -38,7 +38,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['platformFilter'] = array
                 'options_callback'	=> array('tl_module_aggregator_platform_filter', 'typeOptionCallback'),
                 'eval'	=> array
                 (
-                    'mandatory'	=> true,
+ //                   'mandatory'	=> true,
 //                    'tl_class'	=> 'bill_items_type',
 //                    'submitOnChange' => true,
 //                    'chosen'	=> true,
